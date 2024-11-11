@@ -14,7 +14,8 @@ The result? A cleaned-up CSV file with unique articles that can be used for furt
 To get started, you'll need to install a few Python libraries:
 
 ```bash
-pip install newspaper3k sklearn sentence-transformers
+pip install newspaper3k sklearn sentence-transformers pandas numpy
+
 ```
 
 ## File Structure
