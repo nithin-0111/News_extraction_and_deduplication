@@ -86,30 +86,20 @@ The deduplication process compares articles to figure out which ones are duplica
 - **Save Cleaned Data**: Finally, the cleaned articles are saved to a new CSV file.
 
 ## Running the Code
+Running the Code
+
+You can run the scripts just like any other Python program. Here’s how to execute each script:
+
 
 ### 1. Extracting Articles (`articles.py`):
-
-To process a list of URLs and save the articles, just run:
-
-```python
-process_links_from_json('path_to_json_file.json', 'path_to_output_csv_file.csv')
-```
+Run the script to process a list of URLs and save the extracted articles to a CSV file.
 
 ### 2. Deduplication Using TF-IDF (`tfidf.py`):
+Run the script to remove duplicates using the TF-IDF model based on textual similarity.
 
-To remove duplicates using the TF-IDF model, run:
-
-```python
-remove_duplicates_from_csv('path_to_input_csv_file.csv', 'path_to_output_csv_file.csv')
-```
 
 ### 3. Deduplication Using Sentence-BERT (`sentence_bert.py`):
-
-To remove duplicates using the Sentence-BERT model, run:
-
-```python
-remove_duplicates_with_sentence_bert('path_to_input_csv_file.csv', 'path_to_output_csv_file.csv')
-```
+Run the script to remove duplicates using the Sentence-BERT model based on semantic similarity.
 
 ## Results
 
