@@ -66,13 +66,13 @@ This script removes duplicates based on the Sentence-BERT model. Sentence-BERT c
 
 The deduplication process compares articles to figure out which ones are duplicates. We use two methods for this:
 
-#### 1. TF-IDF Model (`deduplicate_tfidf.py`):
+#### 1. TF-IDF Model (`tfidf.py`):
 
 - **How it works**: TF-IDF stands for Term Frequency-Inverse Document Frequency. It’s a fancy way of saying, "Let's figure out which words are important in this article based on their frequency." The script converts the articles into vectors (numbers) based on the words they contain.
 - **Cosine Similarity**: After converting the articles to vectors, the script uses cosine similarity to check how similar each article is to others. If two articles are too similar (above a threshold), they’re considered duplicates.
 - **Efficiency**: TF-IDF is fast and works well for articles that are very similar in wording, but it doesn’t capture deeper meanings.
 
-#### 2. Sentence-BERT Model (`deduplicate_sentence_bert.py`):
+#### 2. Sentence-BERT Model (`sentence_bert.py`):
 
 - **How it works**: Sentence-BERT is a bit more advanced. Instead of just looking at word frequency, it turns each article into a vector that represents the meaning of the sentence (also called an embedding). This allows the model to understand paraphrased content.
 - **Cosine Similarity**: Again, we calculate cosine similarity, but this time using the sentence embeddings. Since Sentence-BERT understands context, it’s better at finding duplicates that might be reworded but mean the same thing.
@@ -87,7 +87,7 @@ The deduplication process compares articles to figure out which ones are duplica
 
 ## Running the Code
 
-### 1. Extracting Articles (`extract_articles.py`):
+### 1. Extracting Articles (`articles.py`):
 
 To process a list of URLs and save the articles, just run:
 
@@ -95,7 +95,7 @@ To process a list of URLs and save the articles, just run:
 process_links_from_json('path_to_json_file.json', 'path_to_output_csv_file.csv')
 ```
 
-### 2. Deduplication Using TF-IDF (`deduplicate_tfidf.py`):
+### 2. Deduplication Using TF-IDF (`tfidf.py`):
 
 To remove duplicates using the TF-IDF model, run:
 
@@ -103,7 +103,7 @@ To remove duplicates using the TF-IDF model, run:
 remove_duplicates_from_csv('path_to_input_csv_file.csv', 'path_to_output_csv_file.csv')
 ```
 
-### 3. Deduplication Using Sentence-BERT (`deduplicate_sentence_bert.py`):
+### 3. Deduplication Using Sentence-BERT (`sentence_bert.py`):
 
 To remove duplicates using the Sentence-BERT model, run:
 
