@@ -22,15 +22,15 @@ pip install newspaper3k sklearn sentence-transformers pandas numpy
 
 The project includes the following scripts:
 
-### 1. `extract_articles.py` (formerly `linktocsv.py`):
+### 1. `extract_articles.py`:
 
-This script takes a list of URLs, extracts the articles using the `newspaper3k` library, and stores them in a CSV file with a unique ID for each article.
+This script takes a list of URLs in .json format, extracts the articles using the `newspaper3k` library, and stores them in a CSV file with a unique ID for each article.
 
-### 2. `deduplicate_tfidf.py` (formerly `tfidfmodel.py`):
+### 2. `tfidf.py`:
 
 This script removes duplicate articles based on their textual similarity using the TF-IDF model. It compares the articles using word frequency vectors and identifies duplicates.
 
-### 3. `deduplicate_sentence_bert.py` (formerly `sentence_bert_model.py`):
+### 3. `sentence_bert.py`:
 
 This script removes duplicates based on the Sentence-BERT model. Sentence-BERT captures the semantic meaning of the sentences, making it more effective at finding paraphrased articles.
 
