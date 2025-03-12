@@ -1,4 +1,4 @@
-# Article Extraction and Deduplication Script
+# News Extraction and Deduplication Script
 
 ## Overview
 
